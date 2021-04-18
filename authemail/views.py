@@ -24,6 +24,21 @@ class Signup(APIView):
     permission_classes = (AllowAny,)
     serializer_class = SignupSerializer
 
+    def save(self, user, serializer):
+        """
+        Saves the given user instance. You can use this hook to perform
+        additional actions such as adding missing parameters before save
+        or overriding existing parameters.
+        """
+        user.save()
+
+    def get_create_extra(self, serializer):
+        """
+        Should return a dictionary with the parameters that are necessary
+        for creation of a new user.
+        """
+        return {}
+
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
@@ -49,7 +64,8 @@ class Signup(APIView):
                     pass
 
             except get_user_model().DoesNotExist:
-                user = get_user_model().objects.create_user(email=email)
+                extra = self.get_create_extra(serializer)
+                user = get_user_model().objects.create_user(email=email, **extra)
 
             # Set user fields provided
             user.set_password(password)
@@ -60,7 +76,7 @@ class Signup(APIView):
                 send_multi_format_email('welcome_email',
                                         {'email': user.email, },
                                         target_email=user.email)
-            user.save()
+            self.save(user, serializer)
 
             if must_validate_email:
                 # Create and associate signup code
