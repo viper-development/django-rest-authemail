@@ -2,6 +2,7 @@ from datetime import date
 
 from django.conf import settings
 from django.contrib.auth import authenticate, get_user_model
+from django.db.utils import IntegrityError
 from django.utils.translation import gettext as _
 
 from rest_framework import status
@@ -24,13 +25,17 @@ class Signup(APIView):
     permission_classes = (AllowAny,)
     serializer_class = SignupSerializer
 
-    def save(self, user, serializer):
+    def save(self, user, serializer, **kwargs):
         """
         Saves the given user instance. You can use this hook to perform
         additional actions such as adding missing parameters before save
         or overriding existing parameters.
         """
-        user.save()
+        try:
+            user.save(**kwargs)
+        except IntegrityError:
+            content = {'detail': _('Could not create user.')}
+            return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
     def get_create_extra(self, serializer):
         """
