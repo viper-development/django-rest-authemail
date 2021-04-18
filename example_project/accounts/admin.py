@@ -20,7 +20,7 @@ class MyUserAdmin(EmailUserAdmin):
 
 
 class VerifiedUserAdmin(MyUserAdmin):
-    def has_add_permission(self, request):
+    def has_add_permission(self, request, **kwargs):
         return False
 
 
