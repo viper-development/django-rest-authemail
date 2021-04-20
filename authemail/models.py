@@ -140,17 +140,17 @@ class EmailChangeCodeManager(models.Manager):
         return EXPIRY_PERIOD
 
 
-def send_multi_format_email(template_prefix, template_ctxt, target_email):
+def send_multi_format_email(template_prefix, template_ctxt, target_email, request=None):
     subject_file = 'authemail/%s_subject.txt' % template_prefix
     txt_file = 'authemail/%s.txt' % template_prefix
     html_file = 'authemail/%s.html' % template_prefix
 
-    subject = render_to_string(subject_file).strip()
+    subject = render_to_string(subject_file, request=request).strip()
     from_email = settings.EMAIL_FROM
     to = target_email
     bcc_email = settings.EMAIL_BCC
-    text_content = render_to_string(txt_file, template_ctxt)
-    html_content = render_to_string(html_file, template_ctxt)
+    text_content = render_to_string(txt_file, template_ctxt, request=request)
+    html_content = render_to_string(html_file, template_ctxt, request=request)
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to],
                                  bcc=[bcc_email])
     msg.attach_alternative(html_content, 'text/html')
@@ -165,14 +165,15 @@ class AbstractBaseCode(models.Model):
     class Meta:
         abstract = True
 
-    def send_email(self, prefix):
+    def send_email(self, prefix, request=None):
         ctxt = {
             'email': self.user.email,
             'first_name': self.user.first_name,
             'last_name': self.user.last_name,
             'code': self.code
         }
-        send_multi_format_email(prefix, ctxt, target_email=self.user.email)
+        send_multi_format_email(
+            prefix, ctxt, target_email=self.user.email, request=request)
 
     def __str__(self):
         return self.code
@@ -183,17 +184,17 @@ class SignupCode(AbstractBaseCode):
 
     objects = SignupCodeManager()
 
-    def send_signup_email(self):
+    def send_signup_email(self, request=None):
         prefix = 'signup_email'
-        self.send_email(prefix)
+        self.send_email(prefix, request=request)
 
 
 class PasswordResetCode(AbstractBaseCode):
     objects = PasswordResetCodeManager()
 
-    def send_password_reset_email(self):
+    def send_password_reset_email(self, request=None):
         prefix = 'password_reset_email'
-        self.send_email(prefix)
+        self.send_email(prefix, request=request)
 
 
 class EmailChangeCode(AbstractBaseCode):
@@ -201,9 +202,9 @@ class EmailChangeCode(AbstractBaseCode):
 
     objects = EmailChangeCodeManager()
 
-    def send_email_change_emails(self):
+    def send_email_change_emails(self, request=None):
         prefix = 'email_change_notify_previous_email'
-        self.send_email(prefix)
+        self.send_email(prefix, request=request)
 
         prefix = 'email_change_confirm_new_email'
         ctxt = {
@@ -211,4 +212,5 @@ class EmailChangeCode(AbstractBaseCode):
             'code': self.code
         }
 
-        send_multi_format_email(prefix, ctxt, target_email=self.email)
+        send_multi_format_email(
+            prefix, ctxt, target_email=self.email, request=request)

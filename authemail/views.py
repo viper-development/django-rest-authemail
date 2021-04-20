@@ -80,14 +80,15 @@ class Signup(APIView):
                 user.is_verified = True
                 send_multi_format_email('welcome_email',
                                         {'email': user.email, },
-                                        target_email=user.email)
+                                        target_email=user.email,
+                                        request=request)
             self.save(user, serializer)
 
             if must_validate_email:
                 # Create and associate signup code
                 ipaddr = self.request.META.get('REMOTE_ADDR', '0.0.0.0')
                 signup_code = SignupCode.objects.create_signup_code(user, ipaddr)
-                signup_code.send_signup_email()
+                signup_code.send_signup_email(request=request)
 
             content = {'email': email, 'first_name': first_name,
                        'last_name': last_name}
@@ -185,7 +186,7 @@ class PasswordReset(APIView):
                 if user.is_verified and user.is_active:
                     password_reset_code = \
                         PasswordResetCode.objects.create_password_reset_code(user)
-                    password_reset_code.send_password_reset_email()
+                    password_reset_code.send_password_reset_email(request=request)
                     content = {'email': email}
                     return Response(content, status=status.HTTP_201_CREATED)
 
@@ -281,7 +282,7 @@ class EmailChange(APIView):
             except get_user_model().DoesNotExist:
                 email_change_code = EmailChangeCode.objects.create_email_change_code(user, email_new)
 
-                email_change_code.send_email_change_emails()
+                email_change_code.send_email_change_emails(request=request)
 
                 content = {'email': email_new}
                 return Response(content, status=status.HTTP_201_CREATED)
