@@ -24,6 +24,8 @@ class SignupCodeInline(admin.TabularInline):
         }),
     )
     readonly_fields = ('code', 'ipaddr', 'created_at')
+    can_delete = False
+    show_change_link = True
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -46,6 +48,8 @@ class PasswordResetCodeInline(admin.TabularInline):
         }),
     )
     readonly_fields = ('code', 'created_at')
+    can_delete = False
+    show_change_link = True
 
     def has_add_permission(self, request, obj=None):
         return False
@@ -68,6 +72,8 @@ class EmailChangeCodeInline(admin.TabularInline):
         }),
     )
     readonly_fields = ('code', 'email', 'created_at')
+    can_delete = False
+    show_change_link = True
 
     def has_add_permission(self, request, obj=None):
         return False
