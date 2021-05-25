@@ -21,6 +21,16 @@ from authemail.serializers import PasswordChangeSerializer
 from authemail.serializers import UserSerializer
 
 
+def get_auth_token(user):
+    """
+    Returns the auth token for the user.
+    """
+    token, _ = Token.objects.get_or_create(
+        user=user)
+
+    return token.key
+
+
 class Signup(APIView):
     permission_classes = (AllowAny,)
     serializer_class = SignupSerializer
@@ -92,6 +102,10 @@ class Signup(APIView):
 
             content = {'email': email, 'first_name': first_name,
                        'last_name': last_name}
+
+            if not must_validate_email:
+                content.update(token=get_auth_token(user))
+
             return Response(content, status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -132,9 +146,8 @@ class Login(APIView):
             if user:
                 if user.is_verified:
                     if user.is_active:
-                        token, created = Token.objects.get_or_create(user=user)
-                        return Response({'token': token.key},
-                                        status=status.HTTP_200_OK)
+                        return Response({'token': get_auth_token(user)},
+                                         status=status.HTTP_200_OK)
                     else:
                         content = {'detail': _('User account not active.')}
                         return Response(content,
