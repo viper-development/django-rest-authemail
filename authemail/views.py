@@ -54,33 +54,46 @@ class Signup(APIView):
         """
         return {}
 
+    def get_user(self, email, serializer):
+        """
+        Should return a user and a response for a signup request. While creating
+        a new user instance if necessary or updating the existing instance. Returning
+        a response will terminate the request with the returned response.
+        """
+        try:
+            user = get_user_model().objects.get(email=email)
+
+            if user.is_verified:
+                content = {'detail': _('Email address already taken.')}
+                return (None, Response(content, status=status.HTTP_400_BAD_REQUEST))
+
+            try:
+                # Delete old signup codes
+                signup_code = SignupCode.objects.get(user=user)
+                signup_code.delete()
+            except SignupCode.DoesNotExist:
+                pass
+
+        except get_user_model().DoesNotExist:
+            extra = self.get_create_extra(serializer)
+            user = get_user_model().objects.create_user(email=email, **extra)
+
+        return (user, None)
+
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
         if serializer.is_valid():
-            email = serializer.data['email']
-            password = serializer.data['password']
-            first_name = serializer.data['first_name']
-            last_name = serializer.data['last_name']
+            email = serializer.data.get('email')
+            password = serializer.data.get('password')
+            first_name = serializer.data.get('first_name')
+            last_name = serializer.data.get('last_name')
 
             must_validate_email = getattr(settings, "AUTH_EMAIL_VERIFICATION", True)
+            user, response = self.get_user(email, serializer)
 
-            try:
-                user = get_user_model().objects.get(email=email)
-                if user.is_verified:
-                    content = {'detail': _('Email address already taken.')}
-                    return Response(content, status=status.HTTP_400_BAD_REQUEST)
-
-                try:
-                    # Delete old signup codes
-                    signup_code = SignupCode.objects.get(user=user)
-                    signup_code.delete()
-                except SignupCode.DoesNotExist:
-                    pass
-
-            except get_user_model().DoesNotExist:
-                extra = self.get_create_extra(serializer)
-                user = get_user_model().objects.create_user(email=email, **extra)
+            if response is not None:
+                return response
 
             # Set user fields provided
             user.set_password(password)
