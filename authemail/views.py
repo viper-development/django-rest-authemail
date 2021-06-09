@@ -207,7 +207,7 @@ class PasswordReset(APIView):
             email = serializer.data['email']
 
             try:
-                user = self.get_user()
+                user = self.get_user(email)
 
                 # Delete all unused password reset codes
                 PasswordResetCode.objects.filter(user=user).delete()
