@@ -197,6 +197,9 @@ class PasswordReset(APIView):
     permission_classes = (AllowAny,)
     serializer_class = PasswordResetSerializer
 
+    def get_user(self, email):
+        return get_user_model().objects.get(email=email)
+
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
@@ -204,7 +207,7 @@ class PasswordReset(APIView):
             email = serializer.data['email']
 
             try:
-                user = get_user_model().objects.get(email=email)
+                user = self.get_user()
 
                 # Delete all unused password reset codes
                 PasswordResetCode.objects.filter(user=user).delete()
