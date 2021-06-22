@@ -1,80 +1,81 @@
-# This file is distributed under the same license as the authemail package.
-# Pascal <chambon.pascal@gmail.com>, 2015.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: 2015-05-22 12:27+0200\n"
-"Last-Translator: Pascal <chambon.pascal@gmail.com>\n"
-"Language-Team: Nothing\n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr "Infos Personnelles"
+msgstr ""
 
 #: admin.py:86
 msgid "Permissions"
-msgstr "Permissions"
+msgstr ""
 
 #: admin.py:88
 msgid "Important dates"
-msgstr "Dates importantes"
+msgstr ""
 
 #: forms.py:12
 msgid "Password"
-msgstr "Mot de passe"
+msgstr ""
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr "Confirmation de mot de passe"
+msgstr ""
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr "Retapez le même mot de passe, pour vérification."
+msgstr ""
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr "Un utilisateur avec cet email existe déjà."
+msgstr ""
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr "Les deux champs mot de passe ne correspondent pas."
+msgstr ""
 
 #: models.py:55
 msgid "first name"
-msgstr "prénom"
+msgstr ""
 
 #: models.py:56
 msgid "last name"
-msgstr "nom"
+msgstr ""
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr "adresse email"
+msgstr ""
 
 #: models.py:59
 msgid "staff status"
-msgstr "statut dans l'équipe"
+msgstr ""
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
-msgstr "Détermine si l'utilisateur peut se connecter au site d'administration."
+msgstr ""
 
 #: models.py:63
 msgid "active"
-msgstr "actif"
+msgstr ""
 
 #: models.py:64
-#| msgid ""
-#| "Designates whether this user should be treated as active. Unselect this "
-#| "instead of deleting accounts."
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
@@ -82,87 +83,78 @@ msgstr ""
 
 #: models.py:66
 msgid "date joined"
-msgstr "date d'arrivée"
+msgstr ""
 
 #: models.py:69
 msgid "verified"
-msgstr "vérifié"
+msgstr ""
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
-"Détermine si cet utilisateur a complété le processus de vérification email "
-"pour pouvoir se connecter."
 
 #: models.py:77
 msgid "user"
-msgstr "utilisateur"
+msgstr ""
 
 #: models.py:78
 msgid "users"
-msgstr "utilisateurs"
+msgstr ""
 
 #: models.py:162
 msgid "code"
-msgstr "code"
+msgstr ""
 
 #: models.py:183
 msgid "ip address"
-msgstr "adresse ip"
+msgstr ""
 
 #: views.py:47
 msgid "Could not create user."
 msgstr ""
 
 #: views.py:67 views.py:304 views.py:347
-#| msgid "User with this Email address already exists."
 msgid "Email address already taken."
 msgstr ""
 
 #: views.py:140 views.py:249
-#| msgid "email address"
 msgid "Email address verified."
 msgstr ""
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr "Impossible de vérifier l'utilisateur."
+msgstr ""
 
 #: views.py:165
 msgid "User account not active."
-msgstr "Compte utilisateur non actif."
+msgstr ""
 
 #: views.py:170
-#| msgid "User account not active."
 msgid "User account not verified."
 msgstr ""
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr "Impossible de se connecter avec ces informations."
+msgstr ""
 
 #: views.py:192
 msgid "User logged out."
-msgstr "Utilisateur déconnecté."
+msgstr ""
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr "Réinitialisation de mot de passe non autorisée."
+msgstr ""
 
 #: views.py:275
 msgid "Password reset."
-msgstr "Réinitialisation de mot de passe."
+msgstr ""
 
 #: views.py:364
-#| msgid "email address"
 msgid "Email address changed."
 msgstr ""
 
 #: views.py:385
 msgid "Password changed."
-msgstr "Mot de passe changé."
-
-#~ msgid "User verified."
-#~ msgstr "Utilisateur vérifié."
+msgstr ""
