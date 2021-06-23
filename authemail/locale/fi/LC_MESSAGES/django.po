@@ -3,157 +3,161 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 17:00+0200\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Henkilökohtaiset tiedot"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Oikeudet"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Tärkeät päivämäärät"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Salasana"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Vahvista salasana"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Kirjoita sama salasana kuin edellä, jotta voit tarkistaa sen."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Käyttäjä, jolla on tämä sähköpostiosoite, on jo olemassa."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "Kaksi salasanakenttää eivät vastanneet toisiaan."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "etunimi"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "sukunimi"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "sähköpostiosoite"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "henkilökunnan tila"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Määrittelee, voiko käyttäjä kirjautua tälle ylläpitosivulle."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "aktiivinen"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Määrittää, pidetäänkö tätä käyttäjää aktiivisena.  Poista tämä valinta sen "
+"sijaan, että poistat tilejä."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "liittymispäivä"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "varmistettu"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Määrittää, onko tämä käyttäjä suorittanut sähköpostivarmennusprosessin "
+"kirjautumisen sallimiseksi."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "käyttäjä"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "käyttäjät"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "koodi"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "ip-osoite"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Käyttäjää ei voitu luoda."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "Sähköpostiosoite on jo varattu."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "Sähköpostiosoite tarkistettu."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Käyttäjää ei pystytä vahvistamaan."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Käyttäjätili ei ole aktiivinen."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Käyttäjätiliä ei ole vahvistettu."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Kirjautuminen annetuilla tunnuksilla ei onnistu."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Käyttäjä kirjautunut ulos."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Salasanan palauttaminen ei ole sallittua."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Salasanan palautus."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "Sähköpostiosoite muuttunut."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Salasana vaihdettu."

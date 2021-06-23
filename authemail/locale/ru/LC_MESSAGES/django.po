@@ -3,159 +3,163 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 17:07+0200\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Личная информация"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Разрешения"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Важные даты"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Подтверждение пароля"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Введите тот же самый пароль второй раз для проверки. "
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Пользователь с таким e-mail уже существует. "
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "Пароли не совпадают."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "Имя"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "фамилия"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "адрес электронной почты"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "статус сотрудников"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Указывает, может ли пользователь войти на этот сайт администратора."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "активный"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Указывает, следует ли считать этого пользователя активным.  Снимите этот "
+"флажок вместо удаления учетных записей."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "Дата добавления"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "подтвержден"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Указывает, завершил ли данный пользователь процесс проверки электронной "
+"почты для разрешения входа в систему."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "пользователь"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "пользователи"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "код"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "ip-адрес"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Не удалось создать пользователя."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "Адрес электронной почты уже занят."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "Адрес электронной почты проверен."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Невозможно проверить пользователя."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Учетная запись пользователя не активна."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Учетная запись пользователя не проверена."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Невозможно войти в систему с предоставленными учетными данными."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Пользователь вышел из системы."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Сброс пароля не разрешен."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Сброс пароля."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "Адрес электронной почты изменен."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Пароль изменен."

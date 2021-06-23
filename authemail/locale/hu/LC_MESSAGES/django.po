@@ -3,157 +3,162 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 17:02+0200\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Személyes adat"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Engedélyek"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Fontos dátumok"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Jelszó"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Jelszó megerősítése"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Adja meg ugyanazt a jelszót, mint fent, az ellenőrzéshez."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Már létezik egy felhasználó ezzel az e-mail címmel."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "A két jelszómező nem egyezett."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "keresztnév"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "vezetéknév"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "e-mail cím"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "személyzeti státusz"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
+"Meghatározza, hogy a felhasználó bejelentkezhet-e erre az admin oldalra."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "aktív"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Meghatározza, hogy ez a felhasználó aktívnak tekintendő-e.  A fiókok törlése "
+"helyett törölje a jelölést."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "csatlakozás időpontja"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "ellenőrzött"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Meghatározza, hogy ez a felhasználó elvégezte-e az e-mail hitelesítési "
+"folyamatot a bejelentkezés engedélyezéséhez."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "felhasználó"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "felhasználó"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "Kód"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "ip-cím"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Nem sikerült létrehozni a felhasználót."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "Az e-mail cím már foglalt."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "Ellenőrzött e-mail cím."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Nem sikerült ellenőrizni a felhasználót."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "A felhasználói fiók nem aktív."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Felhasználói fiók nem ellenőrzött."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Nem sikerült bejelentkezni a megadott hitelesítő adatokkal."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "A felhasználó kijelentkezett."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Jelszó visszaállítása nem engedélyezett."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Jelszó visszaállítása."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "Az e-mail cím megváltozott."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "A jelszó megváltozott."

@@ -3,158 +3,162 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 16:57+0200\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Osobní údaje"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Oprávnění"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Důležitá data"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Heslo"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Ověření hesla"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Pro ověření zadejte stejné heslo jako výše."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Uživatel s takovým e-mailem již existuje."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "Obě pole hesla se neshodovala."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "jméno"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "příjmení"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "e-mailová adresa"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "postavení zaměstnanců"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Určuje, zda se uživatel může přihlásit k tomuto webu správce."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "aktivní"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Určuje, zda má být tento uživatel považován za aktivního.  Místo mazání účtů "
+"tuto možnost zrušte."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "datum připojení"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "ověřeno"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Označuje, zda tento uživatel dokončil proces ověření e-mailu, aby se mohl "
+"přihlásit."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "uživatel"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "uživatelé"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "kód"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "ip adresa"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Nepodařilo se vytvořit uživatele."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "E-mailová adresa již zabrána."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "Ověřená e-mailová adresa."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Nelze ověřit uživatele."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Uživatelský účet není aktivní."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Uživatelský účet nebyl ověřen."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Nelze se přihlásit pomocí zadaných pověření."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Uživatel se odhlásil."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Resetování hesla není povoleno."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Obnovení hesla."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "Změna e-mailové adresy."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Heslo bylo změněno."

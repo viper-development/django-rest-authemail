@@ -3,157 +3,161 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 17:08+0200\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Personlig Information"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Behörigheter"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Viktiga datum"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Lösenordsbekräftelse"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Ange samma lösenord som ovan för kontroll."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Det finns redan en användare med den e-postadressen."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "De två lösenordsfälten stämde inte överens."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "förnamn"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "efternamn"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "e-postadress"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "personalstatus"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Anger om användaren kan logga in på denna administrations webbplats."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Anger om den här användaren ska behandlas som aktiv.  Avmarkera detta i "
+"stället för att radera konton."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "gick med"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "verifierad"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Anger om användaren har slutfört e-postverifieringen för att tillåta "
+"inloggning."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "användare"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "användare"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "kod"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "ip-adress"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Kunde inte skapa användare."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "E-postadress används redan."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "E-postadress verifierad."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Det går inte att verifiera användaren."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Användarkontot är inte aktivt."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Användarkontot är inte verifierat."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Det går inte att logga in med de angivna inloggningsuppgifterna."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Användaren har loggat ut."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Återställning av lösenordet är inte tillåten."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Återställning av lösenordet."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "E-postadressen har ändrats."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Lösenordet har ändrats."

@@ -3,157 +3,162 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 16:58+0200\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Persönliche Informationen"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Berechtigungen"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Wichtige Daten"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Bestätigung des Passworts"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Geben Sie zur Überprüfung das gleiche Passwort wie oben ein."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Ein Benutzer mit dieser E-Mail existiert bereits."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "Die beiden Passwortfelder stimmten nicht überein."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "Vorname"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "Nachname"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "E-Mail-Adresse"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "Mitarbeiterstatus"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
+"Bestimmt ob sich ein Benutzer in den Administrationsbereich einloggen kann."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Bezeichnet, ob dieser Benutzer als aktiv behandelt werden soll.  "
+"Deaktivieren Sie dies, anstatt Konten zu löschen."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "Mitglied seit"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "bestätigt"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Gibt an, ob dieser Benutzer den E-Mail-Verifizierungsprozess abgeschlossen "
+"hat, um die Anmeldung zu ermöglichen."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "Benutzer"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "Benutzer"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "Code"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "IP-Adresse"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Konnte keinen Benutzer erstellen."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "Email Adresse schon verwendet."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "E-Mail Adresse verifiziert."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Benutzer kann nicht verifiziert werden."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Benutzerkonto nicht aktiv."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Benutzerkonto nicht verifiziert."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Die Anmeldung mit den angegebenen Anmeldedaten ist nicht möglich."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Benutzer außerhalb der Sitzung."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Passwort zurücksetzen nicht erlaubt."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Passwort festgelegt."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "E-Mail Adresse geändert."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Passwort wurde geändert."

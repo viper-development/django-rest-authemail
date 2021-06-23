@@ -3,158 +3,163 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 18:23+0530\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-06-22 17:06+0200\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
 "2:1));\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
 
 #: admin.py:85
 msgid "Personal Info"
-msgstr ""
+msgstr "Informații personale"
 
 #: admin.py:86
 msgid "Permissions"
-msgstr ""
+msgstr "Permisiuni"
 
 #: admin.py:88
 msgid "Important dates"
-msgstr ""
+msgstr "Date importante"
 
 #: forms.py:12
 msgid "Password"
-msgstr ""
+msgstr "Parola"
 
 #: forms.py:14
 msgid "Password confirmation"
-msgstr ""
+msgstr "Confirmare parola"
 
 #: forms.py:16
 msgid "Enter the same password as above, for verification."
-msgstr ""
+msgstr "Introduceți aceeași parolă ca mai sus, pentru verificare."
 
 #: forms.py:29
 msgid "A user with that email already exists."
-msgstr ""
+msgstr "Există deja un utilizator cu acest e-mail."
 
 #: forms.py:36
 msgid "The two password fields did not match."
-msgstr ""
+msgstr "Cele două câmpuri de parolă nu se potrivesc."
 
 #: models.py:55
 msgid "first name"
-msgstr ""
+msgstr "nume"
 
 #: models.py:56
 msgid "last name"
-msgstr ""
+msgstr "prenume"
 
 #: models.py:57 models.py:201
 msgid "email address"
-msgstr ""
+msgstr "adresa de e-mail"
 
 #: models.py:59
 msgid "staff status"
-msgstr ""
+msgstr "statutul personalului"
 
 #: models.py:60
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
+"Indică dacă utilizatorul se poate conecta la acest site de administrare."
 
 #: models.py:63
 msgid "active"
-msgstr ""
+msgstr "activ"
 
 #: models.py:64
 msgid ""
 "Designates whether this user should be treated as active.  Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Indică dacă acest utilizator trebuie tratat ca fiind activ.  Debifați "
+"această opțiune în loc să ștergeți conturile."
 
 #: models.py:66
 msgid "date joined"
-msgstr ""
+msgstr "data aderării"
 
 #: models.py:69
 msgid "verified"
-msgstr ""
+msgstr "verificat"
 
 #: models.py:70
 msgid ""
 "Designates whether this user has completed the email verification process to "
 "allow login."
 msgstr ""
+"Indică dacă acest utilizator a finalizat sau nu procesul de verificare a e-"
+"mailului pentru a permite autentificarea."
 
 #: models.py:77
 msgid "user"
-msgstr ""
+msgstr "utilizator"
 
 #: models.py:78
 msgid "users"
-msgstr ""
+msgstr "utilizatori"
 
 #: models.py:162
 msgid "code"
-msgstr ""
+msgstr "codul"
 
 #: models.py:183
 msgid "ip address"
-msgstr ""
+msgstr "adresa ip"
 
 #: views.py:47
 msgid "Could not create user."
-msgstr ""
+msgstr "Nu s-a putut crea un utilizator."
 
 #: views.py:67 views.py:304 views.py:347
 msgid "Email address already taken."
-msgstr ""
+msgstr "Adresa de e-mail este deja ocupată."
 
 #: views.py:140 views.py:249
 msgid "Email address verified."
-msgstr ""
+msgstr "Adresa de e-mail verificată."
 
 #: views.py:143 views.py:252 views.py:278 views.py:367
 msgid "Unable to verify user."
-msgstr ""
+msgstr "Nu se poate verifica utilizatorul."
 
 #: views.py:165
 msgid "User account not active."
-msgstr ""
+msgstr "Contul de utilizator nu este activ."
 
 #: views.py:170
 msgid "User account not verified."
-msgstr ""
+msgstr "Contul de utilizator nu este verificat."
 
 #: views.py:174
 msgid "Unable to login with provided credentials."
-msgstr ""
+msgstr "Imposibil să vă conectați cu acreditările furnizate."
 
 #: views.py:192
 msgid "User logged out."
-msgstr ""
+msgstr "Utilizatorul s-a deconectat."
 
 #: views.py:226
 msgid "Password reset not allowed."
-msgstr ""
+msgstr "Nu este permisă resetarea parolei."
 
 #: views.py:275
 msgid "Password reset."
-msgstr ""
+msgstr "Resetare parolă."
 
 #: views.py:364
 msgid "Email address changed."
-msgstr ""
+msgstr "Adresa de e-mail a fost schimbată."
 
 #: views.py:385
 msgid "Password changed."
-msgstr ""
+msgstr "Parola a fost schimbată."
