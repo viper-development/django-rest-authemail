@@ -21,6 +21,9 @@ from authemail.serializers import PasswordChangeSerializer
 from authemail.serializers import UserSerializer
 
 
+must_validate_email = getattr(settings, "AUTH_EMAIL_VERIFICATION", True)
+
+
 def get_auth_token(user):
     """
     Returns the auth token for the user.
@@ -47,6 +50,11 @@ class Signup(APIView):
             content = {'detail': _('Could not create user.')}
             return Response(content, status=status.HTTP_400_BAD_REQUEST)
 
+    def get_user_lookup_kwargs(self, email, serializer):
+        return {
+            'email': email,
+        }
+
     def get_create_extra(self, serializer):
         """
         Should return a dictionary with the parameters that are necessary
@@ -60,8 +68,10 @@ class Signup(APIView):
         a new user instance if necessary or updating the existing instance. Returning
         a response will terminate the request with the returned response.
         """
+        lookup_kwargs = self.get_user_lookup_kwargs(email, serializer)
+
         try:
-            user = get_user_model().objects.get(email=email)
+            user = get_user_model().objects.get(**lookup_kwargs)
 
             if user.is_verified:
                 content = {'detail': _('Email address already taken.')}
@@ -76,7 +86,8 @@ class Signup(APIView):
 
         except get_user_model().DoesNotExist:
             extra = self.get_create_extra(serializer)
-            user = get_user_model().objects.create_user(email=email, **extra)
+            extra.update(lookup_kwargs)
+            user = get_user_model().objects.create_user(**extra)
 
         return (user, None)
 
@@ -88,8 +99,6 @@ class Signup(APIView):
             password = serializer.data.get('password')
             first_name = serializer.data.get('first_name')
             last_name = serializer.data.get('last_name')
-
-            must_validate_email = getattr(settings, "AUTH_EMAIL_VERIFICATION", True)
             user, response = self.get_user(email, serializer)
 
             if response is not None:
@@ -148,13 +157,18 @@ class Login(APIView):
     permission_classes = (AllowAny,)
     serializer_class = LoginSerializer
 
+    def get_authentication_credentials(self, serializer):
+        return {
+            'email': serializer.data.get('email'),
+            'password': serializer.data.get('password'),
+        }
+
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
         if serializer.is_valid():
-            email = serializer.data['email']
-            password = serializer.data['password']
-            user = authenticate(email=email, password=password)
+            credentials = self.get_authentication_credentials(serializer)
+            user = authenticate(**credentials)
 
             if user:
                 if user.is_verified:
@@ -197,17 +211,19 @@ class PasswordReset(APIView):
     permission_classes = (AllowAny,)
     serializer_class = PasswordResetSerializer
 
-    def get_user(self, email):
-        return get_user_model().objects.get(email=email)
+    def get_user_lookup_kwargs(self, serializer):
+        return {
+            'email': serializer.data.get('email'),
+        }
 
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
         if serializer.is_valid():
-            email = serializer.data['email']
-
             try:
-                user = self.get_user(email)
+                lookup_kwargs = self.get_user_lookup_kwargs(serializer)
+                user = get_user_model().objects.get(**lookup_kwargs)
+                email = user.email
 
                 # Delete all unused password reset codes
                 PasswordResetCode.objects.filter(user=user).delete()
@@ -287,6 +303,10 @@ class EmailChange(APIView):
     permission_classes = (IsAuthenticated,)
     serializer_class = EmailChangeSerializer
 
+    def is_already_taken(self, email):
+        user_with_email = get_user_model().objects.get(email=email)
+        return user_with_email.is_verified
+
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
 
@@ -299,8 +319,7 @@ class EmailChange(APIView):
             email_new = serializer.data['email']
 
             try:
-                user_with_email = get_user_model().objects.get(email=email_new)
-                if user_with_email.is_verified:
+                if self.is_already_taken(email_new):
                     content = {'detail': _('Email address already taken.')}
                     return Response(content, status=status.HTTP_400_BAD_REQUEST)
                 else:
@@ -324,6 +343,16 @@ class EmailChange(APIView):
 class EmailChangeVerify(APIView):
     permission_classes = (AllowAny,)
 
+    def is_already_taken(self, email):
+        user_with_email = get_user_model().objects.get(email=email)
+        return user_with_email.is_verified
+
+    def clean_up_unverified_with_email(self, email):
+        if must_validate_email and not self.is_already_taken(email):
+            get_user_model().objects \
+                .filter(email=email, is_verified=False) \
+                .delete()
+
     def get(self, request, format=None):
         code = request.GET.get('code', '')
 
@@ -339,8 +368,7 @@ class EmailChangeVerify(APIView):
 
             # Check if the email address is being used by a verified user.
             try:
-                user_with_email = get_user_model().objects.get(email=email_change_code.email)
-                if user_with_email.is_verified:
+                if self.is_already_taken(email_change_code.email):
                     # Delete email change code since won't be used
                     email_change_code.delete()
 
@@ -350,7 +378,7 @@ class EmailChangeVerify(APIView):
                     # If the account with this email address is not verified,
                     # delete the account (and signup code) because the email
                     # address will be used for the user who just verified.
-                    user_with_email.delete()
+                    self.clean_up_unverified_with_email(email_change_code.email)
             except get_user_model().DoesNotExist:
                 pass
 
