@@ -62,15 +62,27 @@ class Signup(APIView):
         """
         return {}
 
+    def get_response_extra(self, user):
+        """
+        Should return a dictionary with extra data that should be included
+        in the response.
+        """
+        return {}
+
     def get_user(self, email, serializer):
         """
         Should return a user and a response for a signup request. While creating
         a new user instance if necessary or updating the existing instance. Returning
         a response will terminate the request with the returned response.
         """
-        lookup_kwargs = self.get_user_lookup_kwargs(email, serializer)
-
         try:
+            lookup_kwargs = self.get_user_lookup_kwargs(email, serializer)
+
+            # If the user needs to be created without a check to see if a user
+            # already exists.
+            if not lookup_kwargs:
+                raise get_user_model().DoesNotExist()
+
             user = get_user_model().objects.get(**lookup_kwargs)
 
             if user.is_verified:
@@ -86,8 +98,7 @@ class Signup(APIView):
 
         except get_user_model().DoesNotExist:
             extra = self.get_create_extra(serializer)
-            extra.update(lookup_kwargs)
-            user = get_user_model().objects.create_user(**extra)
+            user = get_user_model().objects.create_user(email=email, **extra)
 
         return (user, None)
 
@@ -122,8 +133,12 @@ class Signup(APIView):
                 signup_code = SignupCode.objects.create_signup_code(user, ipaddr)
                 signup_code.send_signup_email(request=request)
 
-            content = {'email': email, 'first_name': first_name,
-                       'last_name': last_name}
+            content = {
+                'email': email,
+                'first_name': first_name,
+                'last_name': last_name,
+                **self.get_response_extra(user),
+            }
 
             if not must_validate_email:
                 content.update(token=get_auth_token(user))
